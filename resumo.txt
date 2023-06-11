@@ -1,0 +1,28 @@
+criar o projeto em vite
+
+instalar o jest
+
+npx jest --init para fazer as configuracoes do jest
+
+npm i ts-node -D (por causa da configuracao em node)
+
+npm i @types/jest -D
+
+npm i @swc/core @swc/jest -D (ferramenta que cumpre o mesmo papel do babel)
+
+configuracao no jest.config.ts transform para o jest entender que estamos no react
+
+npm i @testing-library/react @testing-library/jest-dom @testing-library/user-event -D
+
+
+Para quem esta criando o projeto nesse momento, com react 18. Talvez voce precise fazer as seguinte confitgurações: 
+instalar: npm install -D jest-environment-jsdom
+no seu ts config: "moduleResolution": "node" ou "NodeNext", 
+
+
+para rodar os testes: npm test
+
+configuracao jest.config.ts para :  
+ setupFilesAfterEnv: [
+    '<rootDir>/src/test/setup.ts'
+  ],
